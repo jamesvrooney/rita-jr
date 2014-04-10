@@ -1,0 +1,5 @@
+dependencies {
+    // Project specific dependencies go here
+	compile('joda-time:joda-time:2.3')
+	compile('javax:javaee-api:7.0')
+}

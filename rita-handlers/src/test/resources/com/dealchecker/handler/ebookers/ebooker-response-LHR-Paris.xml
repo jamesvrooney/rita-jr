@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DynamicPackagingResponse xmlns="http://ws.orbitz.com/schemas/2008/DynamicPackaging" xmlns:air="http://ws.orbitz.com/schemas/2008/Air" xmlns:com="http://ws.orbitz.com/schemas/2008/Common" xmlns:hotel="http://ws.orbitz.com/schemas/2008/Hotel" xmlns:ns5="http://ws.orbitz.com/schemas/2008/Car" xmlns:ns6="http://ws.orbitz.com/schemas/2008/Loyalty" xmlns:ns7="http://ws.orbitz.com/schemas/2008/Vendor" xmlns:ns8="http://ws.orbitz.com/schemas/2008/Oas" xmlns:ns9="http://ws.orbitz.com/schemas/2008/ItinNotify" locale="en_GB" requestId="WS:6ccb9ae6-a0c6-4cbe-9850-6d7329a623bb" responseDate="2014-03-05T04:50:32.809">
+  <PackagingInfo>
+    <TravelerInfo>
+      <Adult count="2"/>
+    </TravelerInfo>
+    <AirSolutions count="2">
+      <OriginAirport code="LHR"/>
+      <DestinationAirport code="CDG"/>
+      <AirSolution airRefId="1">
+        <FareType code="BULK">bulk fare</FareType>
+        <AirSlices>
+          <air:MarketingAirlines>
+            <air:MarketingAirline code="AF">Air France</air:MarketingAirline>
+          </air:MarketingAirlines>
+          <air:Slice travelDuration="PT1H15M">
+            <air:MarketingAirline code="AF">Air France</air:MarketingAirline>
+            <air:Legs airfareConnections="0">
+              <air:Leg SeatMapDataAvailable="true" id="0" travelDuration="PT1H15M">
+                <air:FlightNumber>1081</air:FlightNumber>
+                <air:EquipmentType>Airbus A321</air:EquipmentType>
+                <air:FlightDistance unit="mi">214.0</air:FlightDistance>
+                <air:MarketedBy code="AF">Air France</air:MarketedBy>
+                <air:Departure>
+                  <air:Airport>
+                    <com:Id>47182</com:Id>
+                    <com:Name>Heathrow Airport</com:Name>
+                    <com:Code>LHR</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>London</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="GB">United Kingdom</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-03-12T07:10:00.000</air:Time>
+                </air:Departure>
+                <air:Arrival>
+                  <air:Airport>
+                    <com:Id>34547</com:Id>
+                    <com:Name>Charles de Gaulle Airport</com:Name>
+                    <com:Code>CDG</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>Paris</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="FR">France</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-03-12T09:25:00.000</air:Time>
+                </air:Arrival>
+                <air:CabinType code="C">Economy</air:CabinType>
+              </air:Leg>
+            </air:Legs>
+          </air:Slice>
+          <air:Slice travelDuration="PT1H15M">
+            <air:MarketingAirline code="AF">Air France</air:MarketingAirline>
+            <air:Legs airfareConnections="0">
+              <air:Leg SeatMapDataAvailable="true" id="0" travelDuration="PT1H15M">
+                <air:FlightNumber>1380</air:FlightNumber>
+                <air:EquipmentType>Airbus A321</air:EquipmentType>
+                <air:FlightDistance unit="mi">214.0</air:FlightDistance>
+                <air:MarketedBy code="AF">Air France</air:MarketedBy>
+                <air:Departure>
+                  <air:Airport>
+                    <com:Id>34547</com:Id>
+                    <com:Name>Charles de Gaulle Airport</com:Name>
+                    <com:Code>CDG</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>Paris</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="FR">France</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-04-03T20:15:00.000</air:Time>
+                </air:Departure>
+                <air:Arrival>
+                  <air:Airport>
+                    <com:Id>47182</com:Id>
+                    <com:Name>Heathrow Airport</com:Name>
+                    <com:Code>LHR</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>London</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="GB">United Kingdom</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-04-03T20:30:00.000</air:Time>
+                </air:Arrival>
+                <air:CabinType code="C">Economy</air:CabinType>
+              </air:Leg>
+            </air:Legs>
+          </air:Slice>
+        </AirSlices>
+      </AirSolution>
+      <AirSolution airRefId="2">
+        <FareType code="NET">net fare</FareType>
+        <AirSlices>
+          <air:MarketingAirlines>
+            <air:MarketingAirline code="BA">British Airways</air:MarketingAirline>
+          </air:MarketingAirlines>
+          <air:Slice travelDuration="PT1H15M">
+            <air:MarketingAirline code="BA">British Airways</air:MarketingAirline>
+            <air:Legs airfareConnections="0">
+              <air:Leg id="0" travelDuration="PT1H15M">
+                <air:FlightNumber>322</air:FlightNumber>
+                <air:EquipmentType>Airbus A320</air:EquipmentType>
+                <air:FlightDistance unit="mi">214.0</air:FlightDistance>
+                <air:MarketedBy code="BA">British Airways</air:MarketedBy>
+                <air:Departure>
+                  <air:Airport>
+                    <com:Id>47182</com:Id>
+                    <com:Name>Heathrow Airport</com:Name>
+                    <com:Code>LHR</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>London</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="GB">United Kingdom</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-03-12T17:30:00.000</air:Time>
+                </air:Departure>
+                <air:Arrival>
+                  <air:Airport>
+                    <com:Id>34547</com:Id>
+                    <com:Name>Charles de Gaulle Airport</com:Name>
+                    <com:Code>CDG</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>Paris</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="FR">France</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-03-12T19:45:00.000</air:Time>
+                </air:Arrival>
+                <air:CabinType code="C">Economy</air:CabinType>
+              </air:Leg>
+            </air:Legs>
+          </air:Slice>
+          <air:Slice travelDuration="PT1H20M">
+            <air:MarketingAirline code="BA">British Airways</air:MarketingAirline>
+            <air:Legs airfareConnections="0">
+              <air:Leg id="0" travelDuration="PT1H20M">
+                <air:FlightNumber>315</air:FlightNumber>
+                <air:EquipmentType>Airbus A319</air:EquipmentType>
+                <air:FlightDistance unit="mi">214.0</air:FlightDistance>
+                <air:MarketedBy code="BA">British Airways</air:MarketedBy>
+                <air:Departure>
+                  <air:Airport>
+                    <com:Id>34547</com:Id>
+                    <com:Name>Charles de Gaulle Airport</com:Name>
+                    <com:Code>CDG</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>Paris</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="FR">France</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-04-03T13:55:00.000</air:Time>
+                </air:Departure>
+                <air:Arrival>
+                  <air:Airport>
+                    <com:Id>47182</com:Id>
+                    <com:Name>Heathrow Airport</com:Name>
+                    <com:Code>LHR</com:Code>
+                    <com:Type code="AIRPORT">airport</com:Type>
+                    <com:CityName>London</com:CityName>
+                    <com:StateProvince/>
+                    <com:Country code="GB">United Kingdom</com:Country>
+                  </air:Airport>
+                  <air:Time>2014-04-03T14:15:00.000</air:Time>
+                </air:Arrival>
+                <air:CabinType code="C">Economy</air:CabinType>
+              </air:Leg>
+            </air:Legs>
+          </air:Slice>
+        </AirSlices>
+      </AirSolution>
+    </AirSolutions>
+    <HotelSolutions checkInDate="2014-03-12" checkOutDate="2014-04-03" count="2" numberOfNights="22">
+      <HotelLocation>
+        <com:Id>34547</com:Id>
+        <com:Name>Charles de Gaulle Airport</com:Name>
+        <com:Code>CDG</com:Code>
+        <com:Type code="AIRPORT">airport</com:Type>
+        <com:CityName>Paris</com:CityName>
+        <com:StateProvince code=""/>
+        <com:Country code="FR">France</com:Country>
+      </HotelLocation>
+      <NumberOfRooms>1</NumberOfRooms>
+      <HotelSolution fromCache="false" hostCode="OMH" hotelRefId="1" id="1027181" name="Hotel Atmospheres" phoneNumber="+33 1 43 26 56 02" starRating="3">
+        <Address>
+          <com:Street1>31 rue des Ecoles</com:Street1>
+          <com:City>Paris</com:City>
+          <com:StateProvince/>
+          <com:PostalCode>75005</com:PostalCode>
+          <com:Country>FR</com:Country>
+        </Address>
+        <Distance direction="SW" unit="kilometers">23.46</Distance>
+        <Content>
+          <hotel:Description locale="en_US" type="property">Ideally located in the heart of Paris, in the Latin Quarter, this fully renovated hotel offers a fitness center, a sauna, free Wifi and a bar.&lt;br /&gt;The 56 rooms are air-conditionned and individually decorated. They are equipped with flat screen TV, minibar and private bathroom.&lt;br /&gt;The Hotel Atmospheres is a short walk from the Pantheon,Notre Dame de Paris and 10 min walk from the Luxembourg gardens.</hotel:Description>
+          <hotel:Media title="Hotel-Atmospheres-Hotel-Exterior" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Hotel-Exterior-1.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Lobby" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Lobby-8.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Guest-Room" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Guest-Room-2.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Guest-Room" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Guest-Room-3.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Guest-Room" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Guest-Room-4.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Guest-Room" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Guest-Room-5.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Bathroom" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Bathroom-6.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Bathroom" type="property">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Bathroom-7.jpg</hotel:Media>
+          <hotel:Media title="Hotel-Atmospheres-Thumbnail" type="thumbnail">http://www.tnetnoc.com/hotelimages/181/1027181/2631759-Hotel-Atmospheres-Hotel-Exterior-1_thumb.jpg</hotel:Media>
+          <hotel:Amenities>
+            <hotel:Amenity code="NSMK">No smoking rooms/facilities</hotel:Amenity>
+            <hotel:Amenity code="ORBWLS">Wireless internet</hotel:Amenity>
+            <hotel:Amenity code="INTHS">High speed internet</hotel:Amenity>
+          </hotel:Amenities>
+        </Content>
+        <Geocode>
+          <hotel:Longitude>2.3481</hotel:Longitude>
+          <hotel:Latitude>48.8487</hotel:Latitude>
+        </Geocode>
+        <UserReviews NumberOfRecommendations="17" NumberOfReviews="19" UserScore="4.4"/>
+        <HotelRoom>
+          <RateCode>152</RateCode>
+          <RoomCode>473966431</RoomCode>
+          <RateAccessCode>720414461</RateAccessCode>
+          <RoomDescription>Classic Room - 1 queen bed with Air conditioning, Complimentary Internet Access</RoomDescription>
+          <RoomDescriptionData>
+            <hotel:Bedrooms>1</hotel:Bedrooms>
+            <hotel:Bathrooms>1.0</hotel:Bathrooms>
+            <hotel:RoomType code="ROOM">Room</hotel:RoomType>
+            <hotel:RoomCategory code="CLASSIC">Classic</hotel:RoomCategory>
+          </RoomDescriptionData>
+          <TravelerInfo>
+            <Adult count="2"/>
+          </TravelerInfo>
+          <PromotionalInfo amount="0.0" numNightsFree="0" numNightsRequired="0" promoCode="VA" shortMarketingText="Special offer : save 15%"/>
+        </HotelRoom>
+      </HotelSolution>
+      <HotelSolution fromCache="false" hostCode="OMH" hotelRefId="2" id="21837" name="Unic Renoir Saint Germain Hotel" phoneNumber="33143209604" starRating="3">
+        <Address>
+          <com:Street1>56, Rue du Montparnasse.</com:Street1>
+          <com:City>Paris</com:City>
+          <com:StateProvince/>
+          <com:PostalCode>75014</com:PostalCode>
+          <com:Country>FR</com:Country>
+        </Address>
+        <Distance direction="SW" unit="kilometers">25.1</Distance>
+        <Content>
+          <hotel:Description locale="en_US" type="property">This is a charming, typically French ,boutique style hotel which combines good service with comfortable accommodations at affordable rates that makes the Unic Hotel a top choice for the most discriminating travelers.This Hotel is an ideal place for a comfortable stay.Located in the famous painter's quarter Montparnasse, Unic Hotel Paris is easily accessible from the St Germain des Pres and Quartier Latin.The hotel offers 31 well-lightened and nicely decorated guestrooms that are facilitated with an array of contemporary amenities for a pleasant stay.&#13;
+Continental Breakfast is available.</hotel:Description>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Hotel-Exterior" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Hotel-Exterior-1.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-2.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-3.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-4.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-5.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-6.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-7.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-8.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Other" type="property">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Other-9.jpg</hotel:Media>
+          <hotel:Media title="Unic-Renoir-Saint-Germain-Hotel-Thumbnail" type="thumbnail">http://www.tnetnoc.com/hotelimages/837/21837/2631759-Unic-Renoir-Saint-Germain-Hotel-Hotel-Exterior-1_thumb.jpg</hotel:Media>
+          <hotel:Amenities>
+            <hotel:Amenity code="CNFFAC">Conference facilities</hotel:Amenity>
+            <hotel:Amenity code="MTGFAC">Meeting/Banquet facilities</hotel:Amenity>
+            <hotel:Amenity code="ORBSHT">Airport shuttle</hotel:Amenity>
+            <hotel:Amenity code="BUSCTR">Business centre</hotel:Amenity>
+            <hotel:Amenity code="ORBWLS">Wireless internet</hotel:Amenity>
+            <hotel:Amenity code="INTHS">High speed internet</hotel:Amenity>
+            <hotel:Amenity code="DISABL">Handicapped rooms/facilities</hotel:Amenity>
+          </hotel:Amenities>
+        </Content>
+        <Geocode>
+          <hotel:Longitude>2.3254</hotel:Longitude>
+          <hotel:Latitude>48.8419</hotel:Latitude>
+        </Geocode>
+        <UserReviews NumberOfRecommendations="129" NumberOfReviews="187" UserScore="3.1"/>
+        <HotelRoom>
+          <RateCode>PACK15</RateCode>
+          <RoomCode>12184391</RoomCode>
+          <RateAccessCode>786575141</RateAccessCode>
+          <RoomDescription>Standard Room - 2 twin bed or 1 double bed</RoomDescription>
+          <RoomDescriptionData>
+            <hotel:RoomType code="ROOM">Room</hotel:RoomType>
+            <hotel:RoomCategory code="STANDARD">Standard</hotel:RoomCategory>
+          </RoomDescriptionData>
+          <TravelerInfo>
+            <Adult count="2"/>
+          </TravelerInfo>
+        </HotelRoom>
+      </HotelSolution>
+    </HotelSolutions>
+    <PackageSolutions count="3">
+      <SearchLink>http://www.ebookers.com/psi?type=aph&amp;searchtype=keyword&amp;market=CDG&amp;adults=2&amp;origin=LHR&amp;dest=CDG&amp;departdate=2014-03-12&amp;returndate=2014-04-03&amp;departspan=Anytime&amp;returnspan=Anytime&amp;dc=XML&amp;dp=DealChecker</SearchLink>
+      <PackageSolution airRefId="1" hotelRefId="1" pkgId="1">
+        <RateInformation>
+          <TotalCost currency="GBP">3206.83</TotalCost>
+          <TotalSavings currency="GBP">455.18</TotalSavings>
+          <CostWithoutTax currency="GBP">2799.02</CostWithoutTax>
+          <Taxes currency="GBP">407.81</Taxes>
+          <CostPerPerson currency="GBP">1603.42</CostPerPerson>
+          <isAgeBasedPriceApplied>false</isAgeBasedPriceApplied>
+        </RateInformation>
+        <DeepLink>http://www.ebookers.com/psi?type=aph&amp;searchtype=keyword&amp;market=CDG&amp;adults=2&amp;origin=LHR&amp;dest=CDG&amp;departdate=2014-03-12&amp;returndate=2014-04-03&amp;departspan=Anytime&amp;returnspan=Anytime&amp;dc=XML&amp;dp=DealChecker&amp;id=1027181&amp;selectKey=AF1081LHRCDG0312C_AF1380CDGLHR0403C-1027181_null_null_null_A2%3A0&amp;selectedprice=GBP%7C3206.83&amp;locale=en_GB&amp;WT.mc_ev=click&amp;WT.mc_id=EBUK_APH_DealChecker</DeepLink>
+        <HotelDetails numberOfNights="22">
+          <checkInDate>2014-03-12</checkInDate>
+          <checkOutDate>2014-04-03</checkOutDate>
+        </HotelDetails>
+      </PackageSolution>
+      <PackageSolution airRefId="2" hotelRefId="1" pkgId="2">
+        <RateInformation>
+          <TotalCost currency="GBP">3253.95</TotalCost>
+          <TotalSavings currency="GBP">455.18</TotalSavings>
+          <CostWithoutTax currency="GBP">2857.02</CostWithoutTax>
+          <Taxes currency="GBP">396.93</Taxes>
+          <CostPerPerson currency="GBP">1626.98</CostPerPerson>
+          <isAgeBasedPriceApplied>false</isAgeBasedPriceApplied>
+        </RateInformation>
+        <DeepLink>http://www.ebookers.com/psi?type=aph&amp;searchtype=keyword&amp;market=CDG&amp;adults=2&amp;origin=LHR&amp;dest=CDG&amp;departdate=2014-03-12&amp;returndate=2014-04-03&amp;departspan=Anytime&amp;returnspan=Anytime&amp;dc=XML&amp;dp=DealChecker&amp;id=1027181&amp;selectKey=BA322LHRCDG0312C_BA315CDGLHR0403CBAHBO00-1027181_null_null_null_A2%3A0&amp;selectedprice=GBP%7C3253.95&amp;locale=en_GB&amp;WT.mc_ev=click&amp;WT.mc_id=EBUK_APH_DealChecker</DeepLink>
+        <HotelDetails numberOfNights="22">
+          <checkInDate>2014-03-12</checkInDate>
+          <checkOutDate>2014-04-03</checkOutDate>
+        </HotelDetails>
+      </PackageSolution>
+      <PackageSolution airRefId="1" hotelRefId="2" pkgId="6">
+        <RateInformation>
+          <TotalCost currency="GBP">2981.69</TotalCost>
+          <TotalSavings currency="GBP">682.49</TotalSavings>
+          <CostWithoutTax currency="GBP">2590.82</CostWithoutTax>
+          <Taxes currency="GBP">390.87</Taxes>
+          <CostPerPerson currency="GBP">1490.85</CostPerPerson>
+          <isAgeBasedPriceApplied>false</isAgeBasedPriceApplied>
+        </RateInformation>
+        <DeepLink>http://www.ebookers.com/psi?type=aph&amp;searchtype=keyword&amp;market=CDG&amp;adults=2&amp;origin=LHR&amp;dest=CDG&amp;departdate=2014-03-12&amp;returndate=2014-04-03&amp;departspan=Anytime&amp;returnspan=Anytime&amp;dc=XML&amp;dp=DealChecker&amp;id=21837&amp;selectKey=AF1081LHRCDG0312C_AF1380CDGLHR0403C-21837_null_null_null_A2%3A0&amp;selectedprice=GBP%7C2981.69&amp;locale=en_GB&amp;WT.mc_ev=click&amp;WT.mc_id=EBUK_APH_DealChecker</DeepLink>
+        <HotelDetails numberOfNights="22">
+          <checkInDate>2014-03-12</checkInDate>
+          <checkOutDate>2014-04-03</checkOutDate>
+        </HotelDetails>
+      </PackageSolution>
+    </PackageSolutions>
+  </PackagingInfo>
+</DynamicPackagingResponse>

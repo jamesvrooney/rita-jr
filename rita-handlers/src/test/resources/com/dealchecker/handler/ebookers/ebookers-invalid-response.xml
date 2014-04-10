@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <ErrorResponse xmlns="http://ws.orbitz.com/schemas/2008/Common" 
+  xmlns:ns2="http://ws.orbitz.com/schemas/2008/Car"
+  xmlns:ns3="http://ws.orbitz.com/schemas/2008/Loyalty"
+  xmlns:ns4="http://ws.orbitz.com/schemas/2008/DynamicPackaging"
+  xmlns:ns5="http://ws.orbitz.com/schemas/2008/Air"
+  xmlns:ns6="http://ws.orbitz.com/schemas/2008/Hotel"
+  xmlns:ns7="http://ws.orbitz.com/schemas/2008/Vendor"
+  xmlns:ns8="http://ws.orbitz.com/schemas/2008/Oas"
+  xmlns:ns9="http://ws.orbitz.com/schemas/2008/ItinNotify"
+  requestId="WS:bba922fa-a347-4c7b-98e4-578d7a8980d4"
+  responseDate="2014-03-05T04:56:06.660">
+	<Message errorCode="LOCATION_REQUIRED">Destination keyword or airport code or DestinationLocationId required.</Message>
+</ErrorResponse>
+

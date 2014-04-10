@@ -1,0 +1,16 @@
+task jenkinsTest(type: Test) {
+    inputs.files test.outputs.files
+
+    description = 'Updates test xml timestamps when running in jenkins'
+    group = 'verification'
+
+    doLast{
+        def timestamp = System.currentTimeMillis()
+        File testResultDir = test.testResultsDir
+        if(testResultDir.exists()) {
+            testResultDir.eachFile { it.lastModified = timestamp }
+        }
+    }
+}
+ 
+jenkinsTest.dependsOn(check)

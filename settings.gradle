@@ -1,0 +1,3 @@
+include 'rita-core'
+include 'rita-handlers'
+include 'rita-webapp'

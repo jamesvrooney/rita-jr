@@ -1,0 +1,6 @@
+dependencies {
+    // Project specific dependencies go here
+    // ...
+	compile project(':rita-core')
+	compile 'org.apache.httpcomponents:fluent-hc:4.3.2'
+}

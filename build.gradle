@@ -1,0 +1,36 @@
+subprojects {
+    apply plugin: 'groovy'
+    apply plugin: 'eclipse'
+    apply from: "$rootDir/gradle/jenkinsTests.gradle"
+    apply from: "$rootDir/gradle/integrationTests.gradle"
+    apply from: "$rootDir/gradle/versioning.gradle"
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        // spring stuff	
+        //compile('org.springframework:spring-context:4.0.1.RELEASE') {
+        //    exclude group: 'commons-logging'
+        //}
+        
+        compile('org.codehaus.groovy:groovy-all:2.2.1')
+        compile('com.google.guava:guava:16.0.1')
+
+        // Logging
+        compile('org.slf4j:slf4j-log4j12:1.7.6')
+        compile('org.slf4j:jcl-over-slf4j:1.7.6')
+
+        // Test dependencies
+        testCompile('junit:junit:4.11')
+        testCompile('org.mockito:mockito-all:1.9.5')
+    }
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.11'
+}

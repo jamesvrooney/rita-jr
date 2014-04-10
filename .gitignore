@@ -1,0 +1,26 @@
+# eclipse stuff
+.classpath
+.project
+.settings
+
+# intellij stuff
+.idea/
+*.iml
+*.iws
+
+# project stuff
+*.war
+build/*
+
+# java related stuff
+*.class
+
+# gradle stuff
+.gradle
+
+# other
+*.swp
+
+# ignore me
+/bin
+/build

@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Holiday Debug Search</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Holiday Deals Debug Search</h1>
+	<h3>Search form</h3>
+	<div style="width:200px">
+		<div id="otherParams">
+			<label for="searchToken">Search Token:</label>
+			<input type="text" name="searchToken" value="123"/>
+			<label for="supplierId">Supplier Id:</label>
+			<input type="text" name="supplierId" value="2576"/>
+			<label for="supplierKey">Supplier Key:</label>
+			<input type="text" name="supplierKey" value="PAR"/>
+		</div>
+		<form id="search" action="/api/search" method="post">
+			<label for="departure">Departure:</label>
+			<input type="text" name="departure" value="LON"/>
+			<label for="departureId">DepartureId (w66map_id):</label>
+			<input type="text" name="departureId" value="14344"/>
+			<label for="destination">Destination:</label>
+			<input type="text" name="destination" value="Paris"/>
+			<label for="departureId">DestinationId (w66map_id):</label>
+			<input type="text" name="destinationId" value="3804"/>
+			<label for="departureDate">Departure Date:</label>
+			<input type="text" name="departureDate" th:value="${defaultDepartureDate}" placeholder="yyy/mm/dd"/>
+			<label for="returnDate">Return Date:</label>
+			<input type="text" name="returnDate" th:value="${defaultReturnDate}" placeholder="yyyy/mm/dd"/>
+			<label for="adults">Adults:</label>
+			<input type="text" name="adults" value="2"/>
+			<label for="children">Children:</label>
+			<input type="text" name="children" value="0"/>
+			<label for="infants">Infants:</label>
+			<input type="text" name="infants" value="0"/>
+			<label for="boardType">Board Type:</label>
+			<input type="text" name="boardType" value="ANY"/>
+			<label for="starRating">Star Rating</label>
+			<input type="text" name="starRating" value="3"/>
+			<input type="hidden" name="type" value="HDD" />
+			<input type="submit" value="Search"/>
+		</form>
+	</div>
+	
+	<h3>Response</h3>
+	<textarea id="result-area"></textarea>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var debugSearchUtils = (function($){
+			$.fn.serializeObject = function() {
+			   var o = {};
+			   var a = this.serializeArray();
+			   $.each(a, function() {
+			       if (o[this.name]) {
+			           if (!o[this.name].push) {
+			               o[this.name] = [o[this.name]];
+			           }
+			           o[this.name].push(this.value || '');
+			       } else {
+			           o[this.name] = this.value || '';
+			       }
+			   });
+			   return o;
+			};
+			
+			var fn = {};
+			
+			fn.searchToObject = function() {
+				var searchParam = $('#search').serializeObject();
+				
+				var pairs = $('#otherParams input').map(function(idx,elem){ 
+			        var pair = {};
+			        pair[$(elem).attr('name')] = $(elem).attr('value');
+			        return pair;
+			    });
+			    
+				var otherParams = pairs.get().reduce(function(obj, pair){
+				    for(prop in pair) {
+				        obj[prop] = pair[prop];
+				    }
+				    return obj;
+				});
+				
+				return {
+					search: searchParam,
+					searchToken: otherParams.searchToken,
+					supplierInfo: [{
+						supplierId: otherParams.supplierId,
+						supplierKey: otherParams.supplierKey
+					}]
+				};
+			};
+			
+			fn.pollForResults = function(token) {
+				return $.ajax({
+					type: 'GET',
+					url: '/api/poll',
+					data: "token="+token,
+				});
+			};
+			
+			$('#search input[type=submit]').on('click', function(e) {
+				
+				var searchRequest = fn.searchToObject();
+				
+				var promise = $.ajax({
+					type: 'POST',
+	                url: '/api/search',
+	                data: JSON.stringify(searchRequest),
+	                contentType: 'application/json',
+				});
+				
+				promise.done(function(response) { 
+					console.log('Search status:' + response.status);
+					console.log('Message: ' + response.message);
+					
+					var token = searchRequest.searchToken + '-' + searchRequest.supplierInfo[0].supplierId;
+
+					var intervalId;
+					intervalId = setInterval(function() {
+						var pollPromise = fn.pollForResults(token);
+						pollPromise.done(function(response){
+							if(response.status !== 'SUCCESS') {
+								console.log('Failed to poll for response: ' + response.message);
+								clearInterval(intervalId);
+							} else {
+								var pollResult = response;
+								console.log(pollResult.message);
+								var supplierResult = pollResult.payload.supplierResult;
+								
+								if(supplierResult.status === 'RUNNING') {
+									console.log('Result is not ready yet.');
+									console.log('Retrying in 3 secs...');
+								} else	{
+									if(supplierResult.status === 'COMPLETE') {
+										console.log('Result is complete for token: ' + token);
+										var deals = supplierResult.deals;
+										if(deals.length !== 0) {
+											var resultArea = $('#result-area');
+											
+											// clear it
+											resultArea.val();
+											
+											$.each(deals,function(idx,value) {
+												var txt = resultArea.text();
+												resultArea.val(resultArea.val() + '\n' + JSON.stringify(value));
+											});
+										}
+									} else if(supplierResult.status === 'ERROR') {
+										console.log('Result failed to be generated: ' + supplierResult.message);
+									} else {
+										console.log('ERROR: illegal state: ' + supplierResult.status);
+									}
+									clearInterval(intervalId);
+								}
+							}
+						});
+						pollPromise.fail(function(jqXHR, status, errorThrown){
+							console.log('Failed to poll for response: ' + errorThrown);
+						});
+					}, 3000);
+				});
+				promise.fail(function(jqXHR, status, errorThrown) { console.log('Search failed: ' + status + ' ' + errorThrown); });
+				
+				e.preventDefault();
+			});
+			
+			return {
+				// make them public for testing in the console
+				searchToJson: fn.searchToJson,
+				pollForResults: fn.pollForResults
+			};
+		})(jQuery);
+	</script>
+</body>
+</html>
